@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layers>
+
+    <layer name="ftw.whocando"
+           interface="ftw.whocando.interfaces.IFtwWhocandoLayer"
+           remove="True" />
+
+</layers>
