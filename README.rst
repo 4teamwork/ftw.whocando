@@ -1,10 +1,19 @@
+ftw.whocando
+------------
+
 .. contents:: Table of Contents
 
 
 Introduction
 ============
 
-### INTRODUCTION ###
+ftw.whocando allows to list permissions for each user and page in a plone site installation.
+
+.. figure:: ./docs/_static/mockup_ftw_whocando.png
+    :scale: 50 %
+    :alt: mockup of ftw.whocando view
+    :align: center
+
 
 Compatibility
 -------------
