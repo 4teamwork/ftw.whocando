@@ -12,7 +12,17 @@ class TestWhoCanDoView(FunctionalTestCase):
         browser.login()
         self.create_some_users()
         browser.open(self.portal, view='whocando')
-        # TODO: implement testing view
+        actual = browser.css('.global-roles').first.lists()
+        expected = [
+                ['', 'Lesen', 'Schreiben', 'Administrator', 'Is from LDAP'],
+                ['annemaria.webi', u'\u2713', '', '', ''],
+                ['bernd.adlebert', u'\u2713', u'\u2713', u'\u2713', ''],
+                ['berta.muller', u'\u2713', u'\u2713', u'\u2713', ''],
+                ['hildegard.wessenhachen', u'\u2713', u'\u2713', '', ''],
+                ['hugo.boss', u'\u2713', '', '', '']
+                ]
+
+        self.assertEqual(expected, actual)
 
     def create_some_users(self):
         reader = create(Builder('user')
