@@ -4,6 +4,7 @@ import os
 version = '1.0.0.dev0'
 
 tests_require = [
+    'Products.PloneLDAP',
     'ftw.builder',
     'ftw.testbrowser',
     'ftw.testing',
@@ -47,8 +48,9 @@ setup(
 
     install_requires=[
         'Plone',
-        'setuptools',
         'ftw.upgrade',
+        'plone.api',
+        'setuptools',
     ],
 
     tests_require=tests_require,
