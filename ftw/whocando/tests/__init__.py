@@ -1,6 +1,6 @@
 from ftw.whocando.testing import WHOCANDO_FUNCTIONAL
-from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.app.testing import setRoles
 from unittest2 import TestCase
 import transaction
 
