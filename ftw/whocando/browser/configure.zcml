@@ -1,0 +1,19 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <browser:resourceDirectory
+      name="ftw.whocando-resources"
+      directory="resources"
+      />
+
+  <browser:page
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    permission="cmf.ManagePortal"
+    name="whocando"
+    class=".whocando.WhoCanDoView"
+    template="templates/whocando.pt" />
+
+</configure>

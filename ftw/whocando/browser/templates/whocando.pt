@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="ftw.whocando">
+
+  <body>
+
+    <metal:main fill-slot="content-title">
+      <h1>WhoCanDoView</h1>
+    </metal:main>
+
+    <div metal:fill-slot="content-core" >
+      <h2>Hello World</h2>
+      <div >
+        <table class="global-roles listing">
+          <tr>
+            <th></th>
+            <th>Lesen</th>
+            <th>Schreiben</th>
+            <th>Administrator</th>
+            <th>Is from LDAP</th>
+          </tr>
+         <tr tal:repeat="user_permission_data view/get_user_permission_data">
+
+            <td tal:content="user_permission_data/user_id" />
+            <td><span tal:condition="user_permission_data/view_permission"
+                      class="user-is-permitted"> &#10003;</span></td>
+            <td><span tal:condition="user_permission_data/edit_permission"
+                      class="user-is-permitted">&#10003;</span></td>
+            <td><span tal:condition="user_permission_data/admin_permission"
+                      class="user-is-permitted">&#10003;</span></td>
+            <td><span tal:condition="user_permission_data/is_ldap_user"
+                      class="is-ldap-user">&#10003;</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
