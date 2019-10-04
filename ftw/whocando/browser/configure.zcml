@@ -16,4 +16,11 @@
     class=".whocando.WhoCanDoView"
     template="templates/whocando.pt" />
 
+  <browser:page
+    name="whocando-controlpanel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.WhoCanDoControlPanelView"
+    permission="cmf.ManagePortal"
+    />
+
 </configure>

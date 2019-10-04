@@ -1,0 +1,2 @@
+class WhoCanDoControlPanelView(object):
+    pass
